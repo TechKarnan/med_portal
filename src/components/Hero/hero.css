@@ -1,0 +1,137 @@
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+}
+
+/* images */
+.hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  transform: scale(1.1);
+  filter: brightness(0.7);
+}
+
+/* active image */
+.hero-img.active {
+  opacity: 1;
+}
+
+/* overlay */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.4),
+    rgba(2,2,4,0.9)
+  );
+}
+
+/* content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  top: 40%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 52px;
+  margin: 0;
+}
+
+.hero-content p {
+  margin-top: 12px;
+  color: #cbd5f5;
+}
+
+/* buttons */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* floating cards */
+.floating-card {
+  position: absolute;
+  z-index: 2;
+  background: white;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-size: 12px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.card1 {
+  top: 35%;
+  left: 25%;
+}
+
+.card2 {
+  top: 55%;
+  right: 25%;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}
+
+
+.hero-content h1 {
+  font-size: 52px;
+}
+
+/* tablet */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 42px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .floating-card {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;   /* 🔥 key fix */
+    gap: 12px;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    width: auto;           /* prevent full stretch */
+    min-width: 180px;      /* consistent size */
+  }
+}

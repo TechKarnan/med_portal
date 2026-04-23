@@ -1,0 +1,40 @@
+.btn-primary {
+  background: linear-gradient(135deg, #7c3aed, #6366f1);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-outline {
+  border: 1px solid #ddd;
+  background: transparent;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+/* prevents layout break */
+* {
+  box-sizing: border-box;
+}
+
+/* responsive images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* container scaling */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
