@@ -6,12 +6,14 @@ import Showcase from "../components/Showcase";
 import Team from "../components/Team";
 import Pricing from "../components/Pricing";
 import FAQ from "../components/FAQ";
+import HospitalSearch from "../components/HospitalSearch/HospitalSearch";
 import Footer from "../components/Footer";
 
 export default function Home() {
   return (
     <>
       <Hero />
+      <HospitalSearch />
       <Brands />
       <Heading />
       <Features />
