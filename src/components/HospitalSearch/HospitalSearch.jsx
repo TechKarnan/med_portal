@@ -12,6 +12,8 @@ const SPECIALIZATIONS = [
   "Emergency Medicine",
 ];
 
+const BASE_URL = "https://med-backend-r8bj.onrender.com";
+
 const IMPORTANT_CITIES = [
   { name: "Mumbai", lat: 19.0760, lng: 72.8777 },
   { name: "Delhi", lat: 28.7041, lng: 77.1025 },
@@ -146,7 +148,7 @@ export default function HospitalSearch() {
       params.append("page", page.toString());
       params.append("limit", "10");
 
-      const response = await fetch(`/api/hospitals?${params.toString()}`);
+      const response = await fetch(`${BASE_URL}/api/hospitals?${params.toString()}`);
       if (!response.ok) {
         throw new Error("Network error while fetching hospitals");
       }
